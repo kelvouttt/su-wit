@@ -85,9 +85,17 @@
             alert("You lose, the enemy got 1 point");
             computerScore++
           }
-          console.log(userScore)
-          console.log(computerScore)
+          console.log("User score: " + userScore)
+          console.log("Computer score: " + computerScore)
         }
+        if (userScore > computerScore) {
+          alert(`You have won the game, your score: ${userScore}, theirs: ${computerScore}`)
+        } else if (userScore == computerScore) {
+          alert("You both are strong")
+        } else {
+          alert("You lost, pick a better weapon next time.")
+        }
+
       }
     </script>
   </body>
