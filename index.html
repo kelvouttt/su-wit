@@ -9,7 +9,7 @@
 <body>
     <script>
         function computerPlay() {
-            let responses = ["Rock", "Paper", "Scissors"]
+            let responses = ["batu", "kertas", "gunting"]
             response = responses[Math.floor(Math.random() * responses.length)]
             return response
             // console.log(response)
@@ -37,20 +37,46 @@
         function suwit(choice) {
             computerSelection = computerPlay()
             playerSelection = choice.toLowerCase()
-            // console.log(computerSelection) 
-            // console.log(playerSelection)
-            if (playerSelection == "scissor" && computerSelection == "Paper") {
-                alert("You win, scissor beats paper!!")
-            } else if (playerSelection == "paper" && computerSelection == "Rock") {
-                alert("You win, paper beats rock!!")
-            } else if (playerSelection == "rock" && computerSelection == "Scissor") {
-                alert("You win, rock beats scissor!!")
-            } else if (playerSelection == computerSelection) {
+            console.log(computerSelection) 
+            console.log(playerSelection)
+            if (playerSelection == "gunting" && computerSelection == "kertas") {
+                alert("You win, gunting beats kertas!!")
+            } else if (playerSelection == "kertas" && computerSelection == "batu") {
+                alert("You win, kertas beats batu!!")
+            } else if (playerSelection == "batu" && computerSelection == "gunting") {
+                alert("You win, batu beats gunting!!")
+            } else if (playerSelection === computerSelection) {
                 alert("It's a tie!!")
             } else {
                 alert("You lose, the enemy got 1 point")
             }
         }
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                prompt("Choose your weapon: ..")
+                function suwit(choice) {
+                computerSelection = computerPlay()
+                playerSelection = choice.toLowerCase()
+                // console.log(computerSelection)
+                // console.log(playerSelection)
+                if (playerSelection == "gunting" && computerSelection == "kertas") {
+                    alert("You win, gunting beats kertas!!")
+                } else if (playerSelection == "kertas" && computerSelection == "batu") {
+                    alert("You win, kertas beats batu!!")
+                } else if (playerSelection == "batu" && computerSelection == "gunting") {
+                    alert("You win, batu beats gunting!!")
+                } else if (playerSelection === computerSelection) {
+                    alert("It's a tie!!")
+                } else {
+                    alert("You lose, the enemy got 1 point")
+                    }    
+                }
+            }
+        }
+
+
+        
 
 
 
