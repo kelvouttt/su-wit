@@ -66,36 +66,37 @@
           // console.log(playerSelection)
           if (playerSelection == "gunting" && computerSelection == "kertas") {
             alert("You win, gunting beats kertas!!");
-            userScore++
+            userScore++;
           } else if (
             playerSelection == "kertas" &&
             computerSelection == "batu"
           ) {
             alert("You win, kertas beats batu!!");
-            userScore++
+            userScore++;
           } else if (
             playerSelection == "batu" &&
             computerSelection == "gunting"
           ) {
             alert("You win, batu beats gunting!!");
-            userScore++
+            userScore++;
           } else if (playerSelection === computerSelection) {
             alert("It's a tie!!");
           } else {
             alert("You lose, the enemy got 1 point");
-            computerScore++
+            computerScore++;
           }
-          console.log("User score: " + userScore)
-          console.log("Computer score: " + computerScore)
+          console.log("User score: " + userScore);
+          console.log("Computer score: " + computerScore);
         }
         if (userScore > computerScore) {
-          alert(`You have won the game, your score: ${userScore}, theirs: ${computerScore}`)
+          alert(
+            `You have won the game, your score: ${userScore}, theirs: ${computerScore}`
+          );
         } else if (userScore == computerScore) {
-          alert("You both are strong")
+          alert("You both are strong");
         } else {
-          alert("You lost, pick a better weapon next time.")
+          alert("You lost, pick a better weapon next time.");
         }
-
       }
     </script>
   </body>
