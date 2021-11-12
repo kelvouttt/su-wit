@@ -1,0 +1,42 @@
+<script>
+  
+  // This function is not needed
+  function playerSelection(answer) {
+    selection = answer.toLowerCase();
+    if (selection === "scissor") {
+      return "Scissor";
+      console.log("scissor");
+    } else if (selection === "paper") {
+      return "Paper";
+      console.log("paper");
+    } else if (selection === "rock") {
+      return "Rock";
+      console.log("Rock");
+    } else {
+      return "Lose";
+      console.log("Time's up, enemy got 1 point.");
+    }
+  }
+  // Until this part, do not need to invoke this function
+
+  function suwit(choice) {
+    computerSelection = computerPlay();
+    playerSelection = choice.toLowerCase();
+    console.log(computerSelection);
+    console.log(playerSelection);
+    if (playerSelection == "gunting" && computerSelection == "kertas") {
+      alert("You win, gunting beats kertas!!");
+    } else if (playerSelection == "kertas" && computerSelection == "batu") {
+      alert("You win, kertas beats batu!!");
+    } else if (
+      playerSelection == "batu" &&
+      computerSelection == "gunting"
+    ) {
+      alert("You win, batu beats gunting!!");
+    } else if (playerSelection === computerSelection) {
+      alert("It's a tie!!");
+    } else {
+      alert("You lose, the enemy got 1 point");
+    }
+  }
+</script>
