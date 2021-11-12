@@ -5,99 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="index.js" defer></script>
+    <script src="new_js" defer></script>
   </head>
   <body>
-    <script>
-      function computerPlay() {
-        let responses = ["batu", "kertas", "gunting"];
-        response = responses[Math.floor(Math.random() * responses.length)];
-        return response;
-        // console.log(response)
-      }
+    <div class="container">
+      <button class="gunting">Scissor</button>
+      <button class="kertas">Paper</button>
+      <button class="batu">Rock</button>
+    </div>
 
-      // This function is not needed
-      function playerSelection(answer) {
-        selection = answer.toLowerCase();
-        if (selection === "scissor") {
-          return "Scissor";
-          console.log("scissor");
-        } else if (selection === "paper") {
-          return "Paper";
-          console.log("paper");
-        } else if (selection === "rock") {
-          return "Rock";
-          console.log("Rock");
-        } else {
-          return "Lose";
-          console.log("Time's up, enemy got 1 point.");
-        }
-      }
-      // Until this part, do not need to invoke this function
-
-      function suwit(choice) {
-        computerSelection = computerPlay();
-        playerSelection = choice.toLowerCase();
-        console.log(computerSelection);
-        console.log(playerSelection);
-        if (playerSelection == "gunting" && computerSelection == "kertas") {
-          alert("You win, gunting beats kertas!!");
-        } else if (playerSelection == "kertas" && computerSelection == "batu") {
-          alert("You win, kertas beats batu!!");
-        } else if (
-          playerSelection == "batu" &&
-          computerSelection == "gunting"
-        ) {
-          alert("You win, batu beats gunting!!");
-        } else if (playerSelection === computerSelection) {
-          alert("It's a tie!!");
-        } else {
-          alert("You lose, the enemy got 1 point");
-        }
-      }
-
-      function game() {
-        let userScore = 0;
-        let computerScore = 0;
-        for (let i = 0; i < 5; i++) {
-          userResponse = prompt("Choose your weapon: ..");
-          playerSelection = userResponse.toLowerCase();
-          computerSelection = computerPlay();
-          // console.log(computerSelection)
-          // console.log(playerSelection)
-          if (playerSelection == "gunting" && computerSelection == "kertas") {
-            alert("You win, gunting beats kertas!!");
-            userScore++;
-          } else if (
-            playerSelection == "kertas" &&
-            computerSelection == "batu"
-          ) {
-            alert("You win, kertas beats batu!!");
-            userScore++;
-          } else if (
-            playerSelection == "batu" &&
-            computerSelection == "gunting"
-          ) {
-            alert("You win, batu beats gunting!!");
-            userScore++;
-          } else if (playerSelection === computerSelection) {
-            alert("It's a tie!!");
-          } else {
-            alert("You lose, the enemy got 1 point");
-            computerScore++;
-          }
-          console.log("User score: " + userScore);
-          console.log("Computer score: " + computerScore);
-        }
-        if (userScore > computerScore) {
-          alert(
-            `You have won the game, your score: ${userScore}, theirs: ${computerScore}`
-          );
-        } else if (userScore == computerScore) {
-          alert("You both are strong");
-        } else {
-          alert("You lost, pick a better weapon next time.");
-        }
-      }
-    </script>
   </body>
 </html>
