@@ -15,19 +15,19 @@ function game() {
     // console.log(computerSelection)
     // console.log(playerSelection)
     if (playerSelection == "gunting" && computerSelection == "kertas") {
-      alert("You win, gunting beats kertas!!");
+      alert("You win, scissor beats paper!!");
       userScore++;
     } else if (
       playerSelection == "kertas" &&
       computerSelection == "batu"
     ) {
-      alert("You win, kertas beats batu!!");
+      alert("You win, paper beats rock!!");
       userScore++;
     } else if (
       playerSelection == "batu" &&
       computerSelection == "gunting"
     ) {
-      alert("You win, batu beats gunting!!");
+      alert("You win, rock beats scissor!!");
       userScore++;
     } else if (playerSelection === computerSelection) {
       alert("It's a tie!!");
